@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+  customize:
+      memory: '2048'
+      cpus: '2'
+
+provisioner:
+  name: chef_zero
+  deprecations_as_errors: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-16.04
+
+suites:
+  - name: myhostserver
+    # this is used to setup local consul server for development work
+    driver:
+      vm_hostname: myhostserver
+      network:
+        - ["private_network", {ip: "192.168.1.100"}]
+    run_list:
+      - recipe[chef-assurity-assessment]
+    verifier:
+      inspec_tests:
+        - test/smoke/default

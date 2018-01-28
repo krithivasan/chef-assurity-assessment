@@ -1,0 +1,24 @@
+LineLength:
+  Max: 500
+
+HashSyntax:
+  EnforcedStyle: hash_rockets
+
+SpaceBeforeFirstArg:
+  Exclude:
+    - "**/metadata.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+
+AllCops:
+  Exclude:
+    - "Vagrantfile"
+    - "Thorfile"
+    - "Guardfile"
+    - "Berksfile"
+    - ".kitchen/**"
+    - test/**/*
+    - cookbooks/**/*

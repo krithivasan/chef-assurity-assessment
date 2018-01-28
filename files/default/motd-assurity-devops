@@ -1,0 +1,4 @@
+#!/bin/sh
+
+printf "\n\n**************Hello Assurity DevOps***************\n\n"
+printf "You have done a successful passwordless login to %s (%s %s %s)\n\n" "$(lsb_release -s -d)" "$(uname -o)" "$(uname -r)" "$(uname -m)"
