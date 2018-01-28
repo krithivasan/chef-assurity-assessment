@@ -9,9 +9,9 @@ end
 
 group :integration do
   gem 'kitchen-docker'
-  gem 'test-kitchen'
-  gem 'kitchen-vagrant'
   gem 'kitchen-inspec'
+  gem 'kitchen-vagrant'
+  gem 'test-kitchen'
 end
 
 group :style do
@@ -21,7 +21,7 @@ end
 
 group :unit do
   gem 'chefspec'
-  gem 'rspec'
   gem 'inspec'
+  gem 'rspec'
   gem 'serverspec'
 end
